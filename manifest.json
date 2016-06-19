@@ -1,0 +1,35 @@
+{
+	//manifest版本，现在一般设置为2
+	"manifest_version":2,
+	// 插件名
+	"name":"百度文库签到插件",
+	// 插件版本
+	"version":"1.0.0",
+	// chrome插件的主程序，谨记scripts是一个数组
+	"background":{
+		"scripts":["main.js"]	
+	},
+	// 允许插件可操作的行为
+	"permissions":["tabs","cookies","http://*/*","https://*/*"],
+	// 定义插件的作用范围，browser_action与page_action
+	"browser_action":{
+		// 插件图标
+		"default_icon":"golive.png",
+
+		"default_title":"the message about author",
+
+		"default_popup":"popup.html"
+	},
+	// 注入脚本
+	"content_scripts":[
+		{
+			"js":["content.js"],
+
+			"matches":[
+				"http://wenku.baidu.com/task/browse/daily",
+
+				"https://wenku.baidu.com/task/browse/daily"
+			]
+		}
+	]
+}
