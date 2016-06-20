@@ -18,6 +18,10 @@ function isClose(){
 	var loginInfo = loginBtn.innerHTML;
 	if(loginInfo == '已签到' || loginInfo == (new Date().getDate())){
 		window.close();
+		
+		setTimeout(function (){
+			window.location.href = localUrl+'#signin';
+		},1000);
 	}
 	setTimeout(isClose,5000);
 }
