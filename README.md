@@ -14,10 +14,15 @@ a chrome extension of baidu wenku auto signining
 </p>
 3.然后如果安装成功的话会在右上角看到这个图标,点击可以弹出作者信息
 <p>
-  <img src="https://github.com/zifengb/AutoSignin/blob/master/golive.png" alt="" />
+  <img src="https://github.com/zifengb/AutoSignin/blob/master/baiduLogin/golive.png" alt="" />
 </p>
 4.说明：之后只要每天打开浏览器一次，插件便会自动在百度文库签到，签到到一定的天数就有<strong>下载券</strong>可以用啦啦啦~
 
 #注意事项！！！
-- 如果在个谷歌浏览下出现无法安装第三插件的情况，请点击[解决谷歌无法安装第三方扩展](http://jingyan.baidu.com/article/ce09321b7d581e2bff858f23.html?st=2&os=0&bd_page_type=1&net_type=1),解决方案所使用的chrome.adm模板文件我也找好啦:)
+- 如果在个谷歌浏览下出现无法安装第三插件的情况:    <br />
+  1.可以使用chrome浏览器自带的打包扩展程序功能，把baiduLogin文件夹(源码)打包为*.crx扩展名的扩展包，然后安装同上    <br />
+  2.点击[解决谷歌无法安装第三方扩展](http://jingyan.baidu.com/article/ce09321b7d581e2bff858f23.html?st=2&os=0&bd_page_type=1&net_type=1),解决方案所使用的chrome.adm模板文件我也找好啦:)
+  <p align="center">
+    <img src="http://img.blog.csdn.net/20141119123426950?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ3VsaW5nZWFnbGU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="" />
+  </P>
 - 此插件为作者本人一时兴起所作，并没有携带病毒和其他威胁性的代码！
