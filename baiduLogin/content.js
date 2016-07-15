@@ -29,7 +29,11 @@ function isClose(){
 
 function logined(text){
 	if(text == '已签到' || text == (new Date().getDate())){
-		console.log('checked');
+
+		chrome.storage.sync.set({'loginDate' : rencentDate} , function (){
+			console.log('chrome extension data stored');
+		})
+		
 	}else{
 
 		loginBtn.click();
@@ -53,4 +57,5 @@ console.log(rencentDate);
 console.log(loginBtn.innerHTML);
 
 logined(loginBtn.innerHTML);
+
 
