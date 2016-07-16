@@ -44,7 +44,7 @@ function logined(text){
 
 		setTimeout(function (){
 			window.location.href = localUrl+'#signin';
-		},5000);
+		},3000);
 
 		isClose();
 	}
