@@ -6,6 +6,7 @@ var disableInput = document.getElementById('v_code');
 
 console.log(loginBtn)
 console.log(disableInput)
+console.log(localUrl)
 
 //日期
 var rencentDate = new Date();
@@ -14,17 +15,17 @@ rencentDate = rencentDate.getFullYear()+"-"
 					+rencentDate.getDate();
 
 
-function isClose(){
-	var loginInfo = loginBtn.innerHTML;
-	if(loginInfo == '已签到' || loginInfo == (new Date().getDate())){
-		window.close();
+// function isClose(){
+// 	var loginInfo = loginBtn.innerHTML;
+// 	if(loginInfo == '已签到' || loginInfo == (new Date().getDate())){
+// 		window.close();
 		
-		setTimeout(function (){
-			window.location.href = localUrl+'#signin';
-		},1000);
-	}
-	setTimeout(isClose,5000);
-}
+// 		setTimeout(function (){
+// 			window.location.href = localUrl+'#signin';
+// 		},1000);
+// 	}
+// 	setTimeout(isClose,5000);
+// }
 
 
 function logined(text){
@@ -46,7 +47,7 @@ function logined(text){
 			window.location.href = localUrl+'#signin';
 		},3000);
 
-		isClose();
+		// isClose();
 	}
 }
 
