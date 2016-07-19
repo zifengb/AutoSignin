@@ -35,6 +35,7 @@ function logined(text){
 			console.log('chrome extension data stored');
 		})
 		
+		window.location.href = localUrl+'#signin';
 	}else{
 
 		loginBtn.click();
