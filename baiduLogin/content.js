@@ -6,6 +6,7 @@ var disableInput = document.getElementById('v_code');
 
 console.log(loginBtn)
 console.log(disableInput)
+console.log(localUrl)
 
 //日期
 var rencentDate = new Date();
@@ -14,22 +15,27 @@ rencentDate = rencentDate.getFullYear()+"-"
 					+rencentDate.getDate();
 
 
-function isClose(){
-	var loginInfo = loginBtn.innerHTML;
-	if(loginInfo == '已签到' || loginInfo == (new Date().getDate())){
-		window.close();
+// function isClose(){
+// 	var loginInfo = loginBtn.innerHTML;
+// 	if(loginInfo == '已签到' || loginInfo == (new Date().getDate())){
+// 		window.close();
 		
-		setTimeout(function (){
-			window.location.href = localUrl+'#signin';
-		},1000);
-	}
-	setTimeout(isClose,5000);
-}
+// 		setTimeout(function (){
+// 			window.location.href = localUrl+'#signin';
+// 		},1000);
+// 	}
+// 	setTimeout(isClose,5000);
+// }
 
 
 function logined(text){
 	if(text == '已签到' || text == (new Date().getDate())){
-		console.log('checked');
+
+		chrome.storage.sync.set({'loginDate' : rencentDate} , function (){
+			console.log('chrome extension data stored');
+		})
+		
+		window.location.href = localUrl+'#signin';
 	}else{
 
 		loginBtn.click();
@@ -40,9 +46,9 @@ function logined(text){
 
 		setTimeout(function (){
 			window.location.href = localUrl+'#signin';
-		},5000);
+		},3000);
 
-		isClose();
+		// isClose();
 	}
 }
 
@@ -53,4 +59,5 @@ console.log(rencentDate);
 console.log(loginBtn.innerHTML);
 
 logined(loginBtn.innerHTML);
+
 

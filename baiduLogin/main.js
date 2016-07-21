@@ -42,7 +42,24 @@ window.onload = function (){
 	console.log(date);
 
 
-	var getCookieByObj = {"url":cookieUrl,"name":"loginDate"};
-	//操作cookie
-	chrome.cookies.get(getCookieByObj,getCookie);
+	// var getCookieByObj = {"url":cookieUrl,"name":"loginDate"};
+	// 1.操作cookie
+	// chrome.cookies.get(getCookieByObj,getCookie);
+	
+	// 2.操作chrome.storage
+
+	chrome.storage.sync.get('loginDate',function(obj){
+
+		console.log(JSON.stringify(obj))
+
+		if(JSON.stringify(obj).indexOf(date) === -1){
+			// 打开URL
+			window.open(newUrl);
+		}
+
+
+	})
+
+
+	
 }
