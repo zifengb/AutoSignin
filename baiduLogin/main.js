@@ -1,7 +1,6 @@
-// 默认要打开的URL
-var newUrl = "http://wenku.baidu.com/task/browse/daily";
-// cookie url
-var cookieUrl = "http://wenku.baidu.com/task/browse/daily";
+// 默认要打开的URL、cookie url
+var newUrl = "http://wenku.baidu.com/task/browse/daily",
+    cookieUrl = newUrl;
 // 日期
 var date = null;
 
@@ -52,7 +51,7 @@ window.onload = function (){
 
 		console.log(JSON.stringify(obj))
 
-		if(JSON.stringify(obj).indexOf(date) === -1){
+		if(JSON.stringify(obj).indexOf(date) === -1 && window.navigator.onLine){
 			// 打开URL
 			window.open(newUrl);
 		}
