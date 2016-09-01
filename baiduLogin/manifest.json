@@ -4,7 +4,7 @@
 	// 插件名
 	"name":"百度文库签到插件",
 	// 插件版本
-	"version":"1.0.1",
+	"version":"1.0.2",
 	// chrome插件的主程序，谨记scripts是一个数组
 	"background":{
 		"scripts":["main.js"]	
